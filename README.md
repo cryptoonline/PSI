@@ -1,4 +1,8 @@
 # Machine Problem 2
+##### Computer Security II (CS463), Spring 2015
+##### Due Date: 11:59PM, March 19, 2015
+
+## Java 8 is needed to run the code. Make sure you have Java 8.
 
 Cybersecurity incidents are an ever-growing problem for companies.  Recently, the President of the United States called for steps to improve cybersecurity, including new legislation that would limit liabilities of companies that report incidents that had happened to them. In this machine problem, we will study how companies can share cybersecurity incidents with each other without revealing unnecessary information about the incidents.
   
@@ -10,38 +14,42 @@ You are given a list of cybersecurity incidents in the file incident_list.txt la
 
 Suppose a group Client wants to find if another group Server has experienced the same incidents as it has experienced. You will use the provided code as follows:
 
-Both the Client and the Server need to perform the following steps initially without sharing any information with each other at this stage:
-1.	Download the code from the git repository using using 
+##### Both the Client and the Server need to perform the following steps initially without sharing any information with each other at this stage:
+
+1. Download the code from the git repository using using 
 git clone https://github.com/eSMC/PSI.git
-2.	Compile the code using
-o	Unix/Linux/Mac: javac -cp .:flanagan.jar *.java
-o	Windows: javac -cp “.;flanagan.jar” *.java
-3.	Select exactly 10 unique cybersecurity incidents from the list in file incident_list.txt.
-4.	Create another text file say inputs.txt and put the labels of the 10 incidents you selected in step 2 and separate the labels by new lines. See example example_inputs.txt to understand the format. Do not use the example ‘’example_inputs.txt’’ file. A group using example_inputs.txt as inputs.txt will get zero.
+2. Compile the code using
+  * Unix/Linux/Mac: ```javac -cp .:flanagan.jar *.java```
+ * Windows: ```javac -cp “.;flanagan.jar” *.java```
+3. Select exactly 10 unique cybersecurity incidents from the list in file ```incident_list.txt```.
+4. Create another text file say ```inputs.txt``` and put the labels of the 10 incidents you selected in step 2 and separate the labels by new lines. See example ```example_inputs.txt``` to understand the format. Do not use the example ```example_inputs.txt``` file. A group using ```example_inputs.txt``` as ```inputs.txt``` will get zero.
 
-The Client needs to perform the following steps:
-1.	Run the following program: 
-Unix/Linux/Mac: java -cp .:flanagan.jar ClientPhase1 <cl-inputs.txt>  <netid>
-Windows:  java -cp “.:flanagan.jar” ClientPhase1 <cl-inputs.txt>  <netid>
-Use netid of one of the group member.
-2.	This will generate two files with filename being netid and ClientPK.out. 
-3.	Email both of these files to the Server.
-4.	Wait for the server to run its program and send you the file netid.out.
-5.	After you receive the file from Server named netid.out, put it in the same directory as the code and run the following program: 
-Unix/Linux/Mac: java -cp .:flanagan.jar ClientPhase2 <cl-inputs.txt>  <netid.out>
-Windows: java -cp “.;flanagan.jar” ClientPhase2 <cl-inputs.txt>  <netid.out>
-6.	The program will output the common incidents.
+###### The Client needs to perform the following steps:
 
-Server perform the following steps:
-1.	Put the files (ClientPK.out and netid) received from the Client in the same directory as the code.
-2.	Run the following program:
-Unix/Linux/Mac: java -cp .:flanagan.jar Server <sr-inputs.txt>	<netid>	
-Windows:  java -cp “.:flanagan.jar” Server <sr-inputs.txt> <netid>
-3.	This will generate a file with the filename netid.out. Email this file back to the Client.
+1. Run the following program: 
+  * Unix/Linux/Mac: ```java -cp .:flanagan.jar ClientPhase1 <cl-inputs.txt>  <netid>```
+  * Windows:  ```java -cp “.:flanagan.jar” ClientPhase1 <cl-inputs.txt>  <netid>```
+  * Use netid of one of the group member.
+2. This will generate two files with filename being ```netid``` and ```ClientPK.out```. 
+3. Email both of these files to the Server.
+4. Wait for the server to run its program and send you the file ```netid.out```.
+5. After you receive the file from Server named netid.out, put it in the same directory as the code and run the following program: 
+ * Unix/Linux/Mac: ```java -cp .:flanagan.jar ClientPhase2 <cl-inputs.txt>  <netid.out>```
+ * Windows: ```java -cp “.;flanagan.jar” ClientPhase2 <cl-inputs.txt>  <netid.out>```
+6. The program will output the common incidents.
+
+###### The server perform the following steps:
+
+1. Put the files (ClientPK.out and netid) received from the Client in the same directory as the code.
+2. Run the following program:
+  * Unix/Linux/Mac: java -cp .:flanagan.jar Server <sr-inputs.txt>	<netid>	
+  * Windows:  java -cp “.:flanagan.jar” Server <sr-inputs.txt> <netid>
+3. This will generate a file with the filename netid.out. Email this file back to the Client.
 
 ## Tasks
 
 Each group performs the role of Client and Server with at least two other teams, and does it for the following three settings.
+
 1.	In the first setting, both Client and Server group behave honestly and help each other to find the common incidents.
 2.	In the second setting, Client is ill intentioned and want to learn as much information about the Server incidents as much they can. In this case, Client is allowed to choose any incidents he wants and can run the protocol with the Server multiple times with different list of incidents.
 3.	In the third setting, Server is ill intentioned and want to learn as much information about the Client incidents as much it can. Client is honest. In this case, Client is allowed to choose any incidents he wants and can run the protocol with the Server multiple times with different list of incidents.
@@ -49,9 +57,10 @@ Each group performs the role of Client and Server with at least two other teams,
 ## Report
 
 Write a 1-page report as follows:
-•	A short paragraph on your experience with the first setting.
-•	A paragraph on your experience with the second setting, and what strategies you use to learn maximum amount of information.
-•	A paragraph on your experience with the third setting, and what strategies you use to learn maximum amount of information.
+
+* A short paragraph on your experience with the first setting.
+* A paragraph on your experience with the second setting, and what strategies you use to learn maximum amount of information.
+* A paragraph on your experience with the third setting, and what strategies you use to learn maximum amount of information.
 
 
 
