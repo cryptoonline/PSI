@@ -8,7 +8,7 @@ Cybersecurity incidents are an ever-growing problem for companies.  Recently, th
   
 Each group represents a company that has experienced 10 standard cybersecurity incidents. You seek other companies that have experienced incidents similar to the ones you have experienced. You want to learn whether other companies have experienced similar incidents, but without sharing the set of all incidents you have experienced. 
 
-You are given a list of cybersecurity incidents in the file incident_list.txt labeled from 1 to 25. In this machine problem, each group will select exactly 10 cybersecurity incidents randomly from the list. You will use a private set intersection (PSI) protocol to see if other groups have experienced the same incidents. Each run of the protocol requires exactly two groups: a Client group and a Server group. You are required to run the protocol with at least two other groups. 
+You are given a list of cybersecurity incidents in the file ```incident_list.txt``` labeled from 1 to 25. In this machine problem, each group will select exactly 10 cybersecurity incidents randomly from the list. You will use a private set intersection (PSI) protocol to see if other groups have experienced the same incidents. Each run of the protocol requires exactly two groups: a Client group and a Server group. You are required to run the protocol with at least two other groups. 
 
 ## Running the PSI protocol
 
