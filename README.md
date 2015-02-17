@@ -40,11 +40,11 @@ git clone https://github.com/eSMC/PSI.git
 
 ###### The server perform the following steps:
 
-1. Put the files (ClientPK.out and netid) received from the Client in the same directory as the code.
+1. Put the files (```ClientPK.out``` and ```netid```) received from the Client in the same directory as the code.
 2. Run the following program:
-  * Unix/Linux/Mac: java -cp .:flanagan.jar Server <sr-inputs.txt>	<netid>	
-  * Windows:  java -cp “.:flanagan.jar” Server <sr-inputs.txt> <netid>
-3. This will generate a file with the filename netid.out. Email this file back to the Client.
+  * Unix/Linux/Mac: ```java -cp .:flanagan.jar Server <sr-inputs.txt>	<netid>```
+  * Windows:  ```java -cp “.:flanagan.jar” Server <sr-inputs.txt> <netid>```
+3. This will generate a file with the filename ```netid.out```. Email this file back to the Client.
 
 ## Tasks
 
