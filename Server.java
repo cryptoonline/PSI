@@ -11,12 +11,13 @@ public class Server {
     public static void main(String[] args) {
 
         String filename = args[0];
-
+	String clientFilename = args[1];
+	
         Inputs inputs = new Inputs(filename);
 
         BigInteger[] serverInputs = inputs.getInputs();
 
-        BigInteger[] encryptedPoly = (BigInteger[]) read("Client_To_Server.out");
+        BigInteger[] encryptedPoly = (BigInteger[]) read(clientFilename);
         BigInteger publicKey = (BigInteger) read("ClientPK.out");
 
         Paillier paillier = new Paillier();
@@ -34,7 +35,7 @@ public class Server {
             j++;
         }
 
-        write(encryptedPolyEval, "Server_To_Client.out");
+        write(encryptedPolyEval, clientFilename+".out");
     }
 
     public static void write(Object object, String filename){

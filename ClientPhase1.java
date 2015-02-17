@@ -10,6 +10,7 @@ public class ClientPhase1 {
 
     public static void main(String[] args) {
         String filename = args[0];
+	String netids = args[1];
 
         Paillier paillier = new Paillier();
 
@@ -35,7 +36,7 @@ public class ClientPhase1 {
             encryptedCoefficients[k] = paillier.Encryption(coefficientsBigInteger[k]);
         }
 
-        write(encryptedCoefficients, "Client_To_Server.out");
+        write(encryptedCoefficients, netids);
         write(paillier.getPublicKey(), "ClientPK.out");
         write(paillier.getSecretKey(), "ClientSK.out");
 

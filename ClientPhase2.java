@@ -10,12 +10,13 @@ public class ClientPhase2 {
 
     public static void main(String[] args) {
         String filename = args[0];
+	String fileFromServer = args[1];
 
         ArrayList<BigInteger> sk = (ArrayList<BigInteger>)read("ClientSK.out");
         Paillier paillier = new Paillier();
         paillier.setSecretKey(sk);
 
-        BigInteger[] encryptedPolyEval = (BigInteger[])read("Server_To_Client.out");
+        BigInteger[] encryptedPolyEval = (BigInteger[])read(fileFromServer);
         Inputs inputs = new Inputs(filename);
         BigInteger[] roots = inputs.getInputs();
 
